@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+
+<style>
+   *{
+    box-sizing: border-box;
+    font-family: calibri;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+   }
+   body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(back.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+   }
+ 
+   /*horizontal navbar styles starts*/
+   .horizontalnavbar{
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, .3);
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   }
+
+   .title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    margin-left: 20px;
+
+   }
+
+   .horizontalnavlist ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+   }
+
+   .horizontalnavlist li{
+    list-style: none;
+    transition: .5s;
+
+   }
+   .horizontalnavlist li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+
+   }
+   .active, .horizontalnavlist li:hover{
+    background-color: gray;
+    
+   }
+   /*horizontal navbar styles ends*/
+
+
+
+
+   /*ul class styles*/
+
+   ul .profile{
+    display: none;
+   }
+
+   ul .career{
+    display: none;
+   }
+
+   ul .travel{
+    display: none;
+
+     /*ul class styles*/
+   }
+   
+
+
+
+  /*2 button styles starts*/
+
+  #btn1 {
+    position: absolute;
+    top: 9px;
+    right: .90rem;
+    display: none;
+    
+   }
+   #btn2 {
+    
+    position: absolute;
+    top: 9px;
+    right: .90rem;
+    display: none;
+   }
+   /*2 button styles ends*/
+
+
+   /*container and main class style stars*/
+   .container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+   }
+   .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
+   }
+   
+   /*container and main class style end*/
+
+
+
+
+
+   /*vertical nav style starts*/
+   .sidenav{
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, .3);
+
+
+   }
+  .sidenav li{
+
+  }
+  .sidenav ul{
+    padding: 0;
+    margin: 0;
+  }
+  .sidenav li a{
+    color: white;
+    padding: 20px;
+    display: block;
+    transition: .5s;
+  }
+  .sidenav li a:hover{
+    background-color:gray;
+    color: white;
+  }
+
+  /*vertical nav style ends*/
+  /*main content style starts*/
+  .main-content{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+
+
+  }
+
+  .contenttitle {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 50px;
+    left: 0px;
+    color: white;
+    background-color: black;
+    width: 50%;
+    height: 0%;
+   
+  }
+  .contenttitle h1{
+    font-size: 100px;
+   
+  }
+
+
+
+   #image{
+    max-width: 100%;
+    display: block;
+   }
+   /*Positioning for each placehoder starts*/
+   #place1 {
+    border-radius: 20px;
+    position: relative;
+    width: 50%;
+    height: 30%;
+    bottom: -120px;
+    left: 560px;
+    background-color: rgb(0, 0, 0, .1);
+    text-align: left;
+    overflow: hidden;
+
+  }
+
+  #place2 {
+    border-radius: 20px;
+    position: relative;
+    width: 50%;
+    height: 30%;
+    bottom: -400px;
+    left: -250px;
+    background-color: rgb(0, 0, 0, .1);
+    text-align: left;
+    overflow: hidden;
+
+  }
+
+  #place3 {
+    border-radius: 20px;
+    position: relative;
+    width: 50%;
+    height: 30%;
+    bottom: -500px;
+    left: -200px;
+    background-color: rgb(0, 0, 0, .1);
+    text-align: left;
+    overflow: hidden;
+
+  }
+  /*Positioning for each placehoder*/
+
+
+
+
+  .placeholder img {
+    transform: scale(1.5);
+    transition: all .3s;
+  }
+
+  .placeholder img:hover {
+    transform: scale(1.3);
+    opacity: .3;
+  }
+
+  .imagedes {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: white;
+  }
+
+  .imagedes h2 {
+    font-weight: 700;
+    font-size: 30px;
+    transform: translatey(120px);
+    opacity: 0;
+    transition: 0.4s;
+
+  }
+  .imagedes p {
+    font-size: 15px;
+    transform: translatey(120px);
+    opacity: 0;
+    transition: 0.8s;
+  }
+
+  #cardbtn {
+    background-color: black;
+    border-style: none;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    transition: 1s;
+    transform: translatey(120px);
+  }
+  #cardbtn a{
+    text-decoration: none;
+    color: white;
+  }
+  #cardbtn:hover {
+    background-color:gray;
+    background-color: rgba(0,0,0,.1);
+  }
+
+
+
+  .placeholder:hover .imagedes h2 {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+  .placeholder:hover .imagedes p {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+  .placeholder:hover .imagedes #cardbtn {
+     transform: translatey(0px);
+     opacity: 1;
+  }
+  
+  
+ 
+   /*main content style ends*/
+
+
+/*Ayaw na ni hilabti\pwede ra di ninyo ni apilon*/
+@media (max-width: 600px) {
+    body {
+    background-image: none;
+    }
+
+   .horizontalnavbar{
+    background-color: rgb(65 ,35 ,98);
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   .horizontalnavlist{
+    width: 100%;
+   }
+   .horizontalnavlist li{
+    background-color: black;
+    
+   }
+  .main-content{
+    display: block;
+    align-items: flex-start;
+    margin-left: 20px;
+   }
+   
+
+   ul #profile:hover .profile{
+    display: block;
+    background-color: black;
+   }
+
+
+   ul #career:hover .career{
+    display: block;
+    background-color: black;
+   }
+
+   ul #travel:hover .travel{
+    display: block;
+    background-color: black;
+   }
+
+
+   .horizontalnavlist li{
+    border-radius: 1px;
+    text-align: center;
+   }
+
+   .horizontalnavlist ul{
+    width: 100%;
+    flex-direction: column;
+    display: none;
+   }
+
+   .sidenav{
+    display: none;
+   }
+
+
+   .horizontalnavlist ul.active {
+    display: flex;
+   }
+
+   .horizontalnavlist ul.hide {
+    display: none;
+   }
+
+
+   #btn1{
+    display: flex;
+   }
+   #btn1.hide{
+    display: none;
+   }
+   #btn2{
+    display: none;
+   }
+   #btn2.active{
+    display: flex;
+   }
+}
+/*Ayaw na ni hilabti\pwede ra di ninyo ni apilon*/
+
+
+
+
+</style>
+<body>
+
+<!---->
+  <div class="horizontalnavbar">
+    <div class="title">Travel</div>
+    <button id="btn1"><img src="menu.png"></button>
+    <button id="btn2"><img src="close.png"></button>
+    <div class="horizontalnavlist">
+      <ul>
+        <li id="profile"><a href="#">Profile</a>
+          <!--pwede di na apilon-->
+          <ul class="profile">
+           <li><a href="#">Personal Data</a></li>
+           <li><a href="#">Educational Background</a></li>
+           <li><a href="#">Family Background</a></li>
+           </ul>
+           <!--pwede di na apilon-->
+        </li>
+        <li id="career"><a href="">Career</a>
+          <!--pwede di na apilon-->
+          <ul class="career">
+           <li><a href="#">Pilot</a></li>
+           <li><a href="#">Teacher</a></li>
+           <li><a href="#">SeaMan</a></li>
+           </ul>
+           <!--pwede di na apilon-->
+        </li>
+        <li id="travel" class="active"><a href="">Travel</a>
+          <!--pwede di na apilon-->
+          <ul class="travel">
+           <li><a href="#">Osaka, Japan</a></li>
+           <li><a href="#">Kyoto, Japan</a></li>
+           <li><a href="#">Venice, Italy</a></li>
+           <!--pwede di na apilon-->
+           </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main">
+     <div class="sidenav">
+       <ul>
+         <li><a href="traveljapan.html">Japan</a></li>
+         <li><a href="travelbrazil.html">Brazil</a></li>
+         <li><a href="travelitaly.html">Italy</a></li>
+       </ul>
+     </div>
+     <div class="main-content">
+
+        <div class="contenttitle">
+           <h1>Travel</h1>
+        </div>
+        <div class="placeholder" id="place1">
+             <img src="japan.jpg" id="image"> 
+              <div class="imagedes">
+               <h2>Japan</h2>
+               <p>Japan is one of the oldest civilizations and has a beautiful and diverse history. The stunning, diverse scenery with mountains and breathtaking views, which are much appreciated by the Japanese, offers so many different experiences that attract tourists from all corners of the world.</p>
+               <button id="cardbtn"><a href="https://en.wikipedia.org/wiki/Japan">More Info</a></button>
+            </div>
+        </div>
+        <div class="placeholder" id="place2">
+             <img src="brazil.jpg" id="image"> 
+              <div class="imagedes">
+               <h2>Brazil</h2>
+               <p>Brazil is a synonym for lively rhythms of samba, colourful carnival, long stretches of sandy beaches and one of the most popular football centres. Dive into the otherwordly landscapes, incredible wildlife and unique culture.</p>
+               <button id="cardbtn"><a href="https://en.wikipedia.org/wiki/Brazil">More Info</a></button>
+            </div>
+        </div>
+        <div class="placeholder" id="place3">
+             <img src="italy.jpg" id="image"> 
+              <div class="imagedes">
+               <h2>Italy</h2>
+               <p>Italy is a country famous not only for its glorious landscapes, rich history and vibrant culture, but also for the Italian divine food that is a perfect fit for everyone. Italian food is one of the many reasons why such a huge number of tourists come to Italy every year.</p>
+               <button id="cardbtn"><a href="https://en.wikipedia.org/wiki/Italy">More Info</a></button>
+            </div>
+        </div>
+
+
+
+           <!---<div class="placeholder">
+             <img src="back.jpg">
+           </div>-->
+     </div>
+    </div>
+  </div>
+  
+  <script>
+
+     
+    
+     showMenu = document.querySelector('#btn1');
+     hideMenu = document.querySelector('#btn2');
+     menuitems = document.querySelector('.horizontalnavlist ul');
+
+     showMenu.onclick =()=>{
+       menuitems.classList.add('active');
+       showMenu.classList.add('hide');
+       hideMenu.classList.add('active');
+
+     }
+    hideMenu.onclick =()=>{
+      menuitems.classList.remove('active');
+      showMenu.classList.remove('hide');
+      hideMenu.classList.remove('active');
+      
+    }
+
+
+     /*items = document.querySelector('.links ul');
+
+     var button = document.getElementById('button');
+     button.addEventListener('click', () => {
+  // Do something when the button is clicked
+     items.classList.add('active');
+     });*/
+
+  </script>
+
+</body>
+</html>
